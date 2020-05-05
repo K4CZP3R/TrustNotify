@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+
+    <FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="xyz.k4czp3r.trustnotify.user_interface.FragmentSummary">
+
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/f_summary_constraint_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingBottom="64dp">
+
+
+
+                <Switch
+                    android:id="@+id/f_summary_switchService"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="24dp"
+                    android:text="@string/service_switch_unknown"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"  />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+        </androidx.core.widget.NestedScrollView>
+    </FrameLayout>

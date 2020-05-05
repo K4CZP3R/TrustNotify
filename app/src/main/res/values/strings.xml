@@ -1,0 +1,63 @@
+<resources>
+    <string name="app_name" translatable="false">TrustNotify</string>
+    <string name="package_name" translatable="false">xyz.k4czp3r.trustnotify</string>
+    <string name="notification_channel_id" translatable="false">ksp_broadcast_service</string>
+    <string name="notification_channel_name">TrustNotify Broadcast Service</string>
+
+    <string name="notification_mode_whole">Hide whole notification</string>
+    <string name="notification_mode_content">Hide only content</string>
+
+    <string name="current_mode_key">Current mode:</string>
+    <string name="current_mode_value">Unknown</string>
+    <string name="service_switch_unknown">Service is …</string>
+    <string name="service_switch_off">Service is off</string>
+    <string name="service_switch_on">Service is on</string>
+
+    <string name="set_mode_key">Unlock mode</string>
+
+    <string name="service_status_not_changed">This change was already active</string>
+    <string name="service_status_changed">Service status changed!</string>
+    <string name="start_on_boot_switch_on">Service will start at boot</string>
+    <string name="start_on_boot_switch_off">Service won\'t start at boot</string>
+    <string name="start_on_boot_switch_unknown">Service …</string>
+
+    <string name="permissions_status_key">Permissions status</string>
+    <string name="permissions_status_value" translatable="false">…</string>
+
+    <string name="missing_permissions">Can\'t start service, Missing permissions!</string>
+    <string name="how_to_grant_button">How to grant</string>
+    <string name="how_to_grant_title">How to grant this permissions</string>
+    <string name="how_to_grant_content">Just enter\nadb shell pm grant xyz.k4czp3r.trustnotify *name of the permission*</string>
+
+    <string name="restore_default">Restore default settings</string>
+    <string name="restore_default_button">Restore</string>
+
+    <string name="current_notification_mode_key">Current notification mode</string>
+    <string name="OK" translatable="false">OK</string>
+
+    <string name="device_unsupported_title">Not supported device</string>
+    <string name="device_unsupported_message">This device is known to not work with this app! (At least at stock firmware)</string>
+
+    <string name="start_on_boot">Start on boot</string>
+
+    <string name="missing_permissions_title">Missing some permissions</string>
+    <string name="missing_permissions_content">This app misses some permissions, look at settings to see how to grant them.</string>
+
+    <string name="creator">Made by K4CZP3R</string>
+    <string name="contributors">Without them I would never support so many devices</string>
+    <string name="contributors_names" translatable="false">suenky91\nMatzgitz\nAlexZorzi\nMr.Januzi\nSaad Kothiwala\nGianluigi Vitelli</string>
+
+    <string name="inapp_p_cocacola">Buy me a drink</string>
+    <string name="inapp_p_eat">Buy me something to eat</string>
+    <string name="inapp_p_change">Give me some spare change</string>
+    <string name="support_me">Support me:</string>
+
+    <string name="delay_after_detect_key">Delay after detection:</string>
+    <string name="notification_content">Service is active.</string>
+
+    <string name="service_restart_required_title">Service restart required</string>
+    <string name="service_restart_required_content">A service restart is required to apply new settings!</string>
+    <string name="permissions_granted">All permissions are granted!</string>
+
+
+</resources>

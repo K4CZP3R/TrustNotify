@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="current_mode_key">Aktywny tryb:</string>
+    <string name="current_mode_value">Nieznany</string>
+    <string name="service_switch_unknown">Usługa jest ...</string>
+    <string name="service_switch_off">Usługa jest wyłączona</string>
+    <string name="service_switch_on">Usługa jest aktywna</string>
+    <string name="set_mode_key">Tryb</string>
+    <string name="service_status_not_changed">Ta zmiana jest już aktywna</string>
+    <string name="service_status_changed">Status usługi zmieniony!</string>
+    <string name="start_on_boot_switch_on">Usługa uruchomi się przy starcie</string>
+    <string name="start_on_boot_switch_off">Usługa nie uruchomi sie przy starcie</string>
+    <string name="start_on_boot_switch_unknown">Usługa ...</string>
+    <string name="permissions_status_key">Stan uprawnień</string>
+    <string name="missing_permissions">Start usługi niemożliwy, przyznaj uprawnienia!</string>
+    <string name="how_to_grant_button">Jak przyznać</string>
+    <string name="how_to_grant_title">Jak przyznać uprawnienia</string>
+    <string name="how_to_grant_content">Wpisz  adb shell pm grant k4czp3r.facenotify *nazwa uprawnienia*</string>
+    <string name="restore_default">Przywróć domyślne ustawienia</string>
+    <string name="restore_default_button">Przywróć</string>
+    <string name="current_notification_mode_key">Aktywny tryb powiadomień</string>
+    <string name="device_unsupported_title">Urządzenie nie jest wspierane</string>
+    <string name="device_unsupported_message">Twoje urządzenie nie jest wspierane (na domyślnym oprogramowaniu)</string>
+    <string name="start_on_boot">Uruchom przy starcie</string>
+    <string name="missing_permissions_title">Brak uprawnień</string>
+    <string name="missing_permissions_content">Ta aplikacja potrzebuje uprawnień, zobacz zakładkę \"Ustawienia\"</string>
+    <string name="creator">Stworzone przez K4CZP3R</string>
+    <string name="contributors">Bez tych ludzi, ta aplikacja nie obsługiwała by tyle urządzeń</string>
+    <string name="inapp_p_cocacola">Kup mi coś do picia</string>
+    <string name="inapp_p_eat">Kup mi coś do jedzenia</string>
+    <string name="inapp_p_change">Rzuć mi troche drobnych</string>
+    <string name="support_me">Wesprzyj mnie:</string>
+    <string name="delay_after_detect_key">Opóźnienie po wykryciu twarzy:</string>
+    <string name="notification_content">Usługa jest aktywna.</string>
+    <string name="notification_channel_name">FaceNotify Usługa Broadcast</string>
+    <string name="notification_mode_whole">Ukryj wszystkie powiadomienia</string>
+    <string name="notification_mode_content">Ukryj tylko zawartość</string>
+    <string name="service_restart_required_title">Usługa musi zostać ponownie uruchomiona</string>
+    <string name="service_restart_required_content">Aby zmiany zostały aktywowane, usługa musi zostać zrestartowana!</string>
+    <string name="permissions_granted">All uprawnienia przyznane!</string>
+
+</resources>

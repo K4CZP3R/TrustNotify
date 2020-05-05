@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+    <FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/f_settings_swipe_refresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="xyz.k4czp3r.trustnotify.user_interface.FragmentSettings">
+
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/f_settings_constraint_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingBottom="64dp">
+
+
+
+                <TextView
+                    android:id="@+id/f_settings_textView_notificationMode_key"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="24dp"
+                    android:text="@string/current_notification_mode_key"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <Spinner
+                    android:id="@+id/f_settings_spinnerNotificationMode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="8dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/f_settings_textView_notificationMode_key" />
+
+                <TextView
+                    android:id="@+id/f_settings_textView_delayAfterDetect_key"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="24dp"
+                    android:text="@string/delay_after_detect_key"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/f_settings_spinnerNotificationMode" />
+
+                <Spinner
+                    android:id="@+id/f_settings_spinnerDelayAfterDetect"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="8dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/f_settings_textView_delayAfterDetect_key" />
+
+                <TextView
+                    android:id="@+id/f_settings_textView_startOnBoot_key"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="24dp"
+                    android:text="@string/start_on_boot"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/f_settings_spinnerDelayAfterDetect" />
+                <Switch
+                    android:id="@+id/f_settings_switchStartOnBoot"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="8dp"
+                    android:showText="false"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/f_settings_textView_startOnBoot_key"
+                    tools:text="@string/start_on_boot_switch_unknown" />
+
+                <TextView
+                    android:id="@+id/f_settings_textView_permissionsStatus_key"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="24dp"
+                    android:text="@string/permissions_status_key"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/f_settings_switchStartOnBoot" />
+
+                <TextView
+                    android:id="@+id/f_settings_textView_permissionsStatus_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/permissions_status_value"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/f_settings_textView_permissionsStatus_key" />
+
+                <Button
+                    android:id="@+id/f_settings_button_howtoPerm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/how_to_grant_button"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/f_settings_textView_permissionsStatus_value" />
+
+                <TextView
+                    android:id="@+id/f_settings_textView_restoreDefault"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="24dp"
+                    android:text="@string/restore_default"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/f_settings_button_howtoPerm" />
+
+                <Button
+                    android:id="@+id/f_settings_button_restoreDefault"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/restore_default_button"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/f_settings_textView_restoreDefault" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.core.widget.NestedScrollView>
+    </FrameLayout>

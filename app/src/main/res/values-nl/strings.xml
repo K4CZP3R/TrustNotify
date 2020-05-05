@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="current_mode_key">Huidige modus:</string>
+    <string name="current_mode_value">Onbekend</string>
+    <string name="service_switch_unknown">Service is ...</string>
+    <string name="service_switch_off">Service is uit</string>
+    <string name="service_switch_on">Service is aan</string>
+    <string name="set_mode_key">Modus</string>
+    <string name="service_status_not_changed">Deze verandering is al actief</string>
+    <string name="service_status_changed">Service modus is veranderd!</string>
+    <string name="start_on_boot_switch_on">Service gaat aan bij het opstarten</string>
+    <string name="start_on_boot_switch_off">Service gaat niet aan bij het opstarten</string>
+    <string name="start_on_boot_switch_unknown">Service ...</string>
+    <string name="permissions_status_key">Status van toestemingen</string>
+    <string name="missing_permissions">Kan service niet opstarten, mist paar toestemingen!</string>
+    <string name="how_to_grant_button">Hoe toe te kennen</string>
+    <string name="how_to_grant_title">Hoe toestemingen toe te kennen</string>
+    <string name="how_to_grant_content">Toets adb shell pm grant k4czp3r.facenotify *naam van de toestemming*</string>
+    <string name="restore_default">Standaard instellingen terugzetten</string>
+    <string name="restore_default_button">Terugzetten</string>
+    <string name="current_notification_mode_key">Huidige notificatie modues</string>
+    <string name="device_unsupported_title">Device niet ondersteund</string>
+    <string name="device_unsupported_message">Jouw device zal niet werken met deze app (op de originele systeem)</string>
+    <string name="start_on_boot">Start bij het opstarten</string>
+    <string name="missing_permissions_title">Mist toestemingen</string>
+    <string name="missing_permissions_content">Deze app mist wat toestemingen, kijk naar de instellingen</string>
+    <string name="creator">Gemaakt door K4CZP3R</string>
+    <string name="contributors">Zonder de volgende mensen, zou het me nooit lukken om zoveel devices te ondersteunen</string>
+    <string name="inapp_p_cocacola">Koop iets te drinken voor mij</string>
+    <string name="inapp_p_eat">Koop iets te eten voor mij</string>
+    <string name="inapp_p_change">Gooi wat wisselgeld aan mij</string>
+    <string name="support_me">Steun mij:</string>
+    <string name="delay_after_detect_key">Vertraging na detectie:</string>
+    <string name="notification_content">Service is actief.</string>
+    <string name="notification_channel_name">FaceNotify Broadcast Service</string>
+    <string name="notification_mode_whole">Verberg alle notificaties</string>
+    <string name="notification_mode_content">Verberg alleen inhoud</string>
+    <string name="service_restart_required_title">Service dient opnieuw op te starten</string>
+    <string name="service_restart_required_content">Service moet opnieuw opgestart worden om gemaakte veranderingen toe te passen</string>
+    <string name="permissions_granted">Alle toestemingen zijn OK!</string>
+
+
+</resources>
