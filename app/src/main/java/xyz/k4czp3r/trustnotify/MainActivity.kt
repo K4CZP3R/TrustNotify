@@ -22,7 +22,7 @@ class MainActivity : AppCompatActivity() {
 
     private val summaryPage = Page(
         "Summary",
-        R.drawable.ic_face,
+        R.drawable.ic_lock_screen,
         0
     )
     private val settingsPage = Page(

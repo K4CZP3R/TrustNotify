@@ -13,7 +13,6 @@ import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import xyz.k4czp3r.trustnotify.KspBroadcastService
 import xyz.k4czp3r.trustnotify.KspTrustDetection
 import xyz.k4czp3r.trustnotify.R
-import xyz.k4czp3r.trustnotify.helpers.CompatibilityChecker
 import xyz.k4czp3r.trustnotify.helpers.PermissionHelper
 import xyz.k4czp3r.trustnotify.helpers.PrefsKeys
 import xyz.k4czp3r.trustnotify.helpers.SharedPrefs
@@ -189,17 +188,6 @@ class FragmentSettings : Fragment() {
         }
     }
 
-    private fun updateDataCompCheck(context: Context) {
-
-        if (CompatibilityChecker().isDeviceBlacklisted(context) && !sharedPrefs.getBoolean(PrefsKeys.COMP_CHECK_SEEN)) {
-            showAlert(
-                context,
-                activity!!.getString(R.string.device_unsupported_title),
-                CompatibilityChecker().getReason(context)
-            )
-            sharedPrefs.putBoolean(PrefsKeys.COMP_CHECK_SEEN, true)
-        }
-    }
 
     private fun showAlert(context: Context, title: String, content: String) {
         MaterialAlertDialogBuilder(context)
@@ -214,7 +202,6 @@ class FragmentSettings : Fragment() {
         updateDataNotificationMode(context)
         updateDataStartOnBoot()
         updateDataMissingPerms()
-        updateDataCompCheck(context)
         updateDataDelayAfterDetect(context)
     }
 

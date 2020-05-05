@@ -1,6 +1,7 @@
 package xyz.k4czp3r.trustnotify
 
 import android.app.KeyguardManager
+import android.app.NotificationManager
 import android.content.Context
 import xyz.k4czp3r.trustnotify.helpers.PrefsKeys
 import xyz.k4czp3r.trustnotify.helpers.SecureSetting

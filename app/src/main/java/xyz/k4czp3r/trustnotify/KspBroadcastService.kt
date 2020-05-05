@@ -44,8 +44,6 @@ class KspBroadcastService : Service() {
 
     override fun onCreate() {
         super.onCreate()
-
-
         val channelId = createNotificationChannel(
             getString(R.string.notification_channel_id),
             getString(R.string.notification_channel_name)
@@ -55,7 +53,7 @@ class KspBroadcastService : Service() {
             .setContentTitle(getString(R.string.app_name))
             .setContentText(getString(R.string.notification_content))
             .setCategory(Notification.CATEGORY_SERVICE)
-            .setSmallIcon(R.drawable.ic_face)
+            .setSmallIcon(R.drawable.ic_lock_screen)
             .build()
 
         startForeground(1338, builder)

@@ -44,7 +44,7 @@
     <string name="missing_permissions_content">This app misses some permissions, look at settings to see how to grant them.</string>
 
     <string name="creator">Made by K4CZP3R</string>
-    <string name="contributors">Without them I would never support so many devices</string>
+    <string name="contributors">Without help from these people, this app would not be here:</string>
     <string name="contributors_names" translatable="false">suenky91\nMatzgitz\nAlexZorzi\nMr.Januzi\nSaad Kothiwala\nGianluigi Vitelli</string>
 
     <string name="inapp_p_cocacola">Buy me a drink</string>
