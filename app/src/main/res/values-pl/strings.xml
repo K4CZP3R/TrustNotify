@@ -15,7 +15,7 @@
     <string name="missing_permissions">Start usługi niemożliwy, przyznaj uprawnienia!</string>
     <string name="how_to_grant_button">Jak przyznać</string>
     <string name="how_to_grant_title">Jak przyznać uprawnienia</string>
-    <string name="how_to_grant_content">Wpisz  adb shell pm grant k4czp3r.facenotify *nazwa uprawnienia*</string>
+    <string name="how_to_grant_content">Wpisz  adb shell pm grant k4czp3r.trustnotify *nazwa uprawnienia*</string>
     <string name="restore_default">Przywróć domyślne ustawienia</string>
     <string name="restore_default_button">Przywróć</string>
     <string name="current_notification_mode_key">Aktywny tryb powiadomień</string>
@@ -32,7 +32,7 @@
     <string name="support_me">Wesprzyj mnie:</string>
     <string name="delay_after_detect_key">Opóźnienie po wykryciu twarzy:</string>
     <string name="notification_content">Usługa jest aktywna.</string>
-    <string name="notification_channel_name">FaceNotify Usługa Broadcast</string>
+    <string name="notification_channel_name">TrustNotify Usługa Broadcast</string>
     <string name="notification_mode_whole">Ukryj wszystkie powiadomienia</string>
     <string name="notification_mode_content">Ukryj tylko zawartość</string>
     <string name="service_restart_required_title">Usługa musi zostać ponownie uruchomiona</string>

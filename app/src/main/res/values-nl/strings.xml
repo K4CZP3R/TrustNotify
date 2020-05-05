@@ -15,7 +15,7 @@
     <string name="missing_permissions">Kan service niet opstarten, mist paar toestemingen!</string>
     <string name="how_to_grant_button">Hoe toe te kennen</string>
     <string name="how_to_grant_title">Hoe toestemingen toe te kennen</string>
-    <string name="how_to_grant_content">Toets adb shell pm grant k4czp3r.facenotify *naam van de toestemming*</string>
+    <string name="how_to_grant_content">Toets adb shell pm grant k4czp3r.trustnotify *naam van de toestemming*</string>
     <string name="restore_default">Standaard instellingen terugzetten</string>
     <string name="restore_default_button">Terugzetten</string>
     <string name="current_notification_mode_key">Huidige notificatie modues</string>
@@ -32,7 +32,7 @@
     <string name="support_me">Steun mij:</string>
     <string name="delay_after_detect_key">Vertraging na detectie:</string>
     <string name="notification_content">Service is actief.</string>
-    <string name="notification_channel_name">FaceNotify Broadcast Service</string>
+    <string name="notification_channel_name">TrustNotify Broadcast Service</string>
     <string name="notification_mode_whole">Verberg alle notificaties</string>
     <string name="notification_mode_content">Verberg alleen inhoud</string>
     <string name="service_restart_required_title">Service dient opnieuw op te starten</string>

@@ -10,7 +10,7 @@ enum class PrefsKeys {
 
 class SharedPrefs {
     private var sharedPrefs: SharedPreferences =
-        TrustNotify.instance.getSharedPreferences("FaceNotifyPreferences", Context.MODE_PRIVATE)
+        TrustNotify.instance.getSharedPreferences("TrustNotifyPreferences", Context.MODE_PRIVATE)
 
     fun putInt(key: PrefsKeys, value: Int) {
         with(sharedPrefs.edit()) {

@@ -13,7 +13,7 @@ class SecureSettingsHelper {
         return true
     }
     /*fun getStr(key: SecureSetting): String{
-        return Settings.Secure.getString(FaceNotify.instance.contentResolver, key.name)
+        return Settings.Secure.getString(TrustNotify.instance.contentResolver, key.name)
     }*/
 
 
