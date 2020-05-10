@@ -25,7 +25,7 @@
     <string name="missing_permissions_title">Brak uprawnień</string>
     <string name="missing_permissions_content">Ta aplikacja potrzebuje uprawnień, zobacz zakładkę \"Ustawienia\"</string>
     <string name="creator">Stworzone przez K4CZP3R</string>
-    <string name="contributors">Bez tych ludzi, ta aplikacja nie obsługiwała by tyle urządzeń</string>
+    <string name="contributors">Bez tych ludzi, tej aplikacji by tu nie było:</string>
     <string name="inapp_p_cocacola">Kup mi coś do picia</string>
     <string name="inapp_p_eat">Kup mi coś do jedzenia</string>
     <string name="inapp_p_change">Rzuć mi troche drobnych</string>
@@ -38,5 +38,12 @@
     <string name="service_restart_required_title">Usługa musi zostać ponownie uruchomiona</string>
     <string name="service_restart_required_content">Aby zmiany zostały aktywowane, usługa musi zostać zrestartowana!</string>
     <string name="permissions_granted">All uprawnienia przyznane!</string>
+    <string name="tutorial_link">https://trustnotify.k4czp3r.xyz/how_to_install/</string>
+    <string name="how_to_grant_open">Otwórz poradnik</string>
+    <string name="magisk_grant_button">Użyj Magisk</string>
+    <string name="magisk_alert_title">Użyj Magisk</string>
+    <string name="magisk_alert_content">Jeśli masz zainstalowany Magisk, możesz go użyć żeby przyznać TrustNotify uprawnienia. Chcesz to zrobić?</string>
+    <string name="magisk_alert_yes">Tak</string>
+    <string name="magisk_alert_no">Nie</string>
 
 </resources>

@@ -115,6 +115,18 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/f_settings_textView_permissionsStatus_value" />
 
+                <Button
+                    android:id="@+id/f_settings_button_magiskPerm"
+                    android:text="@string/magisk_grant_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+
+
+                    app:layout_constraintStart_toEndOf="@+id/f_settings_button_howtoPerm"
+                    app:layout_constraintTop_toTopOf="@+id/f_settings_button_howtoPerm" />
+
+
                 <TextView
                     android:id="@+id/f_settings_textView_restoreDefault"
                     android:layout_width="wrap_content"
@@ -139,3 +151,4 @@
             </androidx.constraintlayout.widget.ConstraintLayout>
         </androidx.core.widget.NestedScrollView>
     </FrameLayout>
+

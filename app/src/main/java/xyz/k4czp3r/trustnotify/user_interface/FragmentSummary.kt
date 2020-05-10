@@ -71,13 +71,7 @@ class FragmentSummary : Fragment() {
             )
             return
         }
-        if (KspBroadcastService.state() == newState) {
-            Toast.makeText(
-                context,
-                activity!!.getString(R.string.service_status_not_changed),
-                Toast.LENGTH_SHORT
-            ).show()
-        } else {
+        if (KspBroadcastService.state() != newState) {
             if (newState) {
                 KspBroadcastService.start(context)
                 KspTrustDetection().prepareSecureSettingsFor(

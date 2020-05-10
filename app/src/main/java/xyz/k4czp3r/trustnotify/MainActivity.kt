@@ -9,6 +9,7 @@ import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentPagerAdapter
 import androidx.viewpager.widget.ViewPager
 import com.google.android.material.tabs.TabLayout
+import com.topjohnwu.superuser.Shell
 import xyz.k4czp3r.trustnotify.models.Page
 import xyz.k4czp3r.trustnotify.user_interface.FragmentAbout
 import xyz.k4czp3r.trustnotify.user_interface.FragmentSettings
@@ -22,7 +23,7 @@ class MainActivity : AppCompatActivity() {
 
     private val summaryPage = Page(
         "Summary",
-        R.drawable.ic_face,
+        R.drawable.ic_lock_screen,
         0
     )
     private val settingsPage = Page(
@@ -42,6 +43,8 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        setupShellConfig()
+
         viewPager = findViewById(R.id.am_view_pager)
         fragmentPagerAdapter = KspPagerAdapter(supportFragmentManager)
         viewPager.adapter = fragmentPagerAdapter
@@ -54,6 +57,14 @@ class MainActivity : AppCompatActivity() {
             tabLayout.getTabAt(page.getPagePosition())?.text = page.getPageName()
         }
 
+
+
+    }
+
+    private fun setupShellConfig(){
+        Shell.Config.setFlags(Shell.FLAG_REDIRECT_STDERR)
+        Shell.Config.verboseLogging(BuildConfig.DEBUG)
+        Shell.Config.setTimeout(5)
     }
 
 

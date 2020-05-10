@@ -4,12 +4,15 @@ apply plugin: 'kotlin-android-extensions'
 
 ext.versionMajor = 1
 ext.versionMinor = 0
-ext.versionPatch = 0
+ext.versionPatch = 1
 
 android {
     compileSdkVersion 29
     buildToolsVersion "29.0.3"
-
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
     defaultConfig {
         applicationId "xyz.k4czp3r.trustnotify"
         minSdkVersion 27
@@ -36,6 +39,10 @@ private String generateVersionName(){
     return "${ext.versionMajor}.${ext.versionMinor}.${ext.versionPatch}"
 }
 
+repositories{
+    maven {url 'https://jitpack.io'}
+}
+
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
@@ -50,4 +57,7 @@ dependencies {
     implementation 'com.jaredrummler:android-device-names:2.0.0'
     implementation 'com.android.billingclient:billing:2.2.0'
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+
+    def libsuVersion = '2.5.1'
+    implementation "com.github.topjohnwu.libsu:core:${libsuVersion}"
 }
