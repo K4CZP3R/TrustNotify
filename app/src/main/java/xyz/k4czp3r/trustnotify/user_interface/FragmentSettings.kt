@@ -3,13 +3,17 @@ package xyz.k4czp3r.trustnotify.user_interface
 import android.Manifest
 import android.content.Context
 import android.content.DialogInterface
+import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.*
 import androidx.fragment.app.Fragment
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
+import com.topjohnwu.superuser.Shell
 import xyz.k4czp3r.trustnotify.KspBroadcastService
 import xyz.k4czp3r.trustnotify.KspTrustDetection
 import xyz.k4czp3r.trustnotify.R
@@ -19,6 +23,7 @@ import xyz.k4czp3r.trustnotify.helpers.SharedPrefs
 import xyz.k4czp3r.trustnotify.models.DelayAfterDetectTypes
 import xyz.k4czp3r.trustnotify.models.NotificationTypes
 
+
 class FragmentSettings : Fragment() {
 
     private lateinit var spinnerNotificationMode: Spinner
@@ -27,10 +32,11 @@ class FragmentSettings : Fragment() {
     private lateinit var buttonHowToGrant: Button
     private lateinit var buttonRestoreDefault: Button
     private lateinit var spinnerDelayAfterDetect: Spinner
+    private lateinit var buttonMagiskGrant: Button
     private val sharedPrefs: SharedPrefs = SharedPrefs()
     private val permissionHelper = PermissionHelper()
     private val neededPermissions = listOf(Manifest.permission.WRITE_SECURE_SETTINGS)
-
+    private val TAG = FragmentSettings::class.qualifiedName
 
     companion object {
         fun newInstance(): FragmentSettings {
@@ -55,6 +61,7 @@ class FragmentSettings : Fragment() {
         buttonHowToGrant = view.findViewById(R.id.f_settings_button_howtoPerm)
         buttonRestoreDefault = view.findViewById(R.id.f_settings_button_restoreDefault)
         spinnerDelayAfterDetect = view.findViewById(R.id.f_settings_spinnerDelayAfterDetect)
+        buttonMagiskGrant = view.findViewById(R.id.f_settings_button_magiskPerm)
 
 
         updateData(view.context)
@@ -105,8 +112,22 @@ class FragmentSettings : Fragment() {
         }
         buttonHowToGrant.setOnClickListener { v -> buttonHowToGrantClick(v) }
         buttonRestoreDefault.setOnClickListener { v -> buttonRestoreDefaultClick(v) }
+        buttonMagiskGrant.setOnClickListener { v -> buttonMagiskGrantClick(v) }
     }
-
+    private fun buttonMagiskGrantClick(view: View){
+        MaterialAlertDialogBuilder(view.context)
+            .setTitle(activity!!.getString(R.string.magisk_alert_title))
+            .setMessage(activity!!.getString(R.string.magisk_alert_content))
+            .setPositiveButton(activity!!.getString(R.string.magisk_alert_yes), DialogInterface.OnClickListener{_,_ ->
+                val result = Shell.su("pm grant xyz.k4czp3r.trustnotify android.permission.WRITE_SECURE_SETTINGS").exec().isSuccess
+                Log.i(TAG, "Shell command returned: $result")
+                if(result) updateData(view.context)
+            })
+            .setNeutralButton(activity!!.getString(R.string.magisk_alert_no), DialogInterface.OnClickListener{_,_->
+                Log.i(TAG, "Skipping magisk")
+            })
+            .show()
+    }
     private fun buttonRestoreDefaultClick(view: View) {
         if (sharedPrefs.getBoolean(PrefsKeys.PERMISSIONS_GRANTED)) {
             KspTrustDetection().restoreDefaultNotificationSettings()
@@ -120,6 +141,11 @@ class FragmentSettings : Fragment() {
         MaterialAlertDialogBuilder(view.context)
             .setTitle(activity!!.getString(R.string.how_to_grant_title))
             .setMessage(activity!!.getString(R.string.how_to_grant_content))
+            .setNeutralButton(activity!!.getString(R.string.how_to_grant_open), DialogInterface.OnClickListener { _, _ ->
+                val browserIntent =
+                    Intent(Intent.ACTION_VIEW, Uri.parse(activity!!.getString(R.string.tutorial_link)))
+                startActivity(browserIntent)
+            })
             .show()
     }
 
@@ -179,11 +205,13 @@ class FragmentSettings : Fragment() {
             }
             permissionsStatus.text = permissionText
             buttonHowToGrant.visibility = View.VISIBLE
+            buttonMagiskGrant.visibility = View.VISIBLE
             sharedPrefs.putBoolean(PrefsKeys.PERMISSIONS_GRANTED, false)
         } else {
             permissionsStatus.text = activity!!.getString(R.string.permissions_granted)
             sharedPrefs.putBoolean(PrefsKeys.PERMISSIONS_GRANTED, true)
             buttonHowToGrant.visibility = View.GONE
+            buttonMagiskGrant.visibility = View.GONE
 
         }
     }

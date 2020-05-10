@@ -38,6 +38,13 @@
     <string name="service_restart_required_title">Service dient opnieuw op te starten</string>
     <string name="service_restart_required_content">Service moet opnieuw opgestart worden om gemaakte veranderingen toe te passen</string>
     <string name="permissions_granted">Alle toestemingen zijn OK!</string>
+    <string name="tutorial_link">https://trustnotify.k4czp3r.xyz/how_to_install/</string>
+    <string name="how_to_grant_open">Open gids</string>
+    <string name="magisk_grant_button">Gebruik Magisk</string>
+    <string name="magisk_alert_title">Gebruik Magisk</string>
+    <string name="magisk_alert_content">Als je gebruik maakt van Magisk, kun je die gebruiken om de toestemingen toe te geven voor TrustNotify. Wil je het doen?</string>
+    <string name="magisk_alert_yes">Ja</string>
+    <string name="magisk_alert_no">Nee</string>
 
 
 </resources>

@@ -105,7 +105,6 @@ class FragmentAbout : Fragment(), PurchasesUpdatedListener {
     }
 
     override fun onPurchasesUpdated(p0: BillingResult?, p1: MutableList<Purchase>?) {
-
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
